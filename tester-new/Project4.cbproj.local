@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.387,C:\Users\Вадим\Documents\RAD Studio\Projects\Project4.cbproj=E:\ПОРТФОЛИО\ArhiveAll\tester-new\Project4.cbproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.029,=C:\Users\Вадим\Documents\RAD Studio\8.0\Imports\ACTIVELISTENPROJECTLib_TLB.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.629,C:\Users\Вадим\Documents\RAD Studio\8.0\Imports\ACTIVELISTENPROJECTLib_TLB.cpp=</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.494,=C:\Users\Вадим\Documents\RAD Studio\Projects\Unit3.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.955,=C:\Users\Вадим\Documents\RAD Studio\Projects\Unit3.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.829,C:\Users\Вадим\Documents\RAD Studio\Projects\Unit3.cpp=E:\ПОРТФОЛИО\ArhiveAll\tester-new\Unit3.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.077,=E:\ПОРТФОЛИО\ArhiveAll\tester-new\ACTIVEVOICEPROJECTLib_OCX.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.236,E:\ПОРТФОЛИО\ArhiveAll\tester-new\SpeechLib_OCX.cpp=</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.965,=E:\ПОРТФОЛИО\ArhiveAll\tester-new\ACTIVEVOICEPROJECTLib_TLB.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.461,=C:\Users\Вадим\Documents\RAD Studio\Projects\Project4.res</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.927,=C:\Users\Вадим\Documents\RAD Studio\Projects\Project4.res</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.322,C:\Users\Вадим\Documents\RAD Studio\8.0\Imports\SpeechLib_TLB.h=E:\ПОРТФОЛИО\ArhiveAll\tester-new\SpeechLib_TLB.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.829,C:\Users\Вадим\Documents\RAD Studio\Projects\Unit3.h=E:\ПОРТФОЛИО\ArhiveAll\tester-new\Unit3.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.073,C:\Users\Вадим\Documents\RAD Studio\8.0\Imports\SpeechLib_TLB.cpp=</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.148,=C:\Users\Вадим\Documents\RAD Studio\8.0\Imports\SpeechLib_TLB.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.546,=C:\Users\Вадим\Documents\RAD Studio\8.0\Imports\SpeechLib_TLB.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.025,C:\Users\Вадим\Documents\RAD Studio\8.0\Imports\SpeechLib_OCX.h=E:\ПОРТФОЛИО\ArhiveAll\tester-new\SpeechLib_OCX.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.504,=C:\Users\Вадим\Documents\RAD Studio\8.0\Imports\SpeechLib_OCX.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.025,C:\Users\Вадим\Documents\RAD Studio\8.0\Imports\SpeechLib_OCX.cpp=E:\ПОРТФОЛИО\ArhiveAll\tester-new\SpeechLib_OCX.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.829,C:\Users\Вадим\Documents\RAD Studio\Projects\Unit3.dfm=E:\ПОРТФОЛИО\ArhiveAll\tester-new\Unit3.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.648,E:\ПОРТФОЛИО\ArhiveAll\tester-new\SpeechLib_TLB.cpp=</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.895,=E:\ПОРТФОЛИО\ArhiveAll\tester-new\SpeechLib_TLB.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.326,=C:\Users\Вадим\Documents\RAD Studio\8.0\Imports\SpeechLib_TLB.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.322,C:\Users\Вадим\Documents\RAD Studio\8.0\Imports\SpeechLib_TLB.cpp=E:\ПОРТФОЛИО\ArhiveAll\tester-new\SpeechLib_TLB.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.694,C:\Users\Вадим\Documents\RAD Studio\8.0\Imports\SpeechLib_TLB.cpp=</Transaction>
+  </Transactions>
+</BorlandProject>
