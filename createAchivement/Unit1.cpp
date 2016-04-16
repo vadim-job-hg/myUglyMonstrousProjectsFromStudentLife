@@ -1,0 +1,29 @@
+//---------------------------------------------------------------------------
+
+#include <vcl.h>
+#pragma hdrstop
+
+#include "Unit1.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma resource "*.dfm"
+TForm1 *Form1;
+class achievementBase{//Тип - База данных достижений
+public:
+	int num;  //номер
+	AnsiString name; //Имя достижения
+	AnsiString html_dis;  //html - не открыто
+	AnsiString html_en;   //html - открыто
+	int img_dis;          //картинка - не открыто
+	int img_en;           //картинка - открыто
+	int enouchAll;        //Внутренний счетчик - макс значение
+	int eachShow;         //Шаг внутреннего счетчика показуещего ход выполнения
+	int soundOpened;      //id - звука при открытии достижения
+};
+//---------------------------------------------------------------------------
+__fastcall TForm1::TForm1(TComponent* Owner)
+	: TForm(Owner)
+{
+}
+//---------------------------------------------------------------------------
+
