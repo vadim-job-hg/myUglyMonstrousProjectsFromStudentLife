@@ -1,0 +1,6 @@
+<level name="Demo Level 1">
+<entity class="Car" pos="300,250,300">
+<body mass="20" />
+</entity>
+<entity class="Robot" pos="100,250,100">
+</level>

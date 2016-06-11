@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.796,=C:\Users\Вадим\Documents\RAD Studio\Projects\Project3.res</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.196,C:\Users\Вадим\Documents\RAD Studio\Projects\Unit2.h=Z:\myProject 2.0\Login.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.196,C:\Users\Вадим\Documents\RAD Studio\Projects\Unit2.cpp=Z:\myProject 2.0\Login.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.815,=C:\Users\Вадим\Documents\RAD Studio\Projects\Unit2.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.196,C:\Users\Вадим\Documents\RAD Studio\Projects\Unit2.dfm=Z:\myProject 2.0\Login.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.103,=Z:\myProject 2.0\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.648,C:\Users\Вадим\Documents\RAD Studio\Projects\Project3.cbproj=Z:\myProject 2.0\Traning.cbproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.839,Z:\myProject 2.0\File1.h=Z:\myProject 2.0\header.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.726,=Z:\myProject 2.0\File1.h</Transaction>
+  </Transactions>
+</BorlandProject>
