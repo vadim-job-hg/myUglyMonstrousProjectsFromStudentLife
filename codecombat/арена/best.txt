@@ -1,0 +1,94 @@
+this.tacktick = function(n, en) 
+{    
+    if(n<2)
+    {
+        this.say("Defend!", {targetPos: {x: 70, y: 30}});
+    }
+    else
+    if(this.distance(en)<16)
+    {
+        this.say("Attack!", {target: en});
+    }
+    else if(n<20)
+    {
+         this.say("Defend!", {targetPos: {x: 70, y: 30}});
+    }
+};
+this.defense = function(en) 
+{      
+    if(this.distance(en)<20)
+    {
+        this.say("Attack!", {target: en});
+        if(!this.getCooldown('jump')&&this.distance(en)>10&&this.distance(en)<15)
+        {            
+            this.jumpTo(en.pos);
+        }
+        else
+         if(!this.getCooldown('throw'))
+            {
+                this.throw(en);
+            }
+            else 
+            {
+                this.attack(en);
+            }        
+    }
+};
+this.attacke = function(n, en, e)
+{
+    if(n<22)
+    {
+        this.say("Follow! Follow ME!");
+    }
+    else
+    {   
+        this.say("Attack!", {target: e});
+        var count = 0;
+        for(var i=0; i<en.length; i++)
+        {
+            dist = this.distance(en[i]);
+            if(dist<10)
+            {
+                count++;
+            }
+        }
+        if(!this.getCooldown('stomp') && this.distance(e) < 10 && count>4)
+            {
+                this.stomp();
+            }
+            else if(!this.getCooldown('jump')&&this.distance(e)>15&&this.distance(e)<20)
+            {
+                this.jumpTo(e.pos);
+            }
+            else
+            if(!this.getCooldown('throw'))
+            {
+                this.throw(e);
+            }
+            else
+            {
+                this.attack(e);
+            }
+        
+    }
+};
+var nows = this.now();
+var friends = this.getFriends();
+var enemies = this.getEnemies();
+if (enemies.length === 0) return;  // Chill if all enemies are dea
+var enemy = this.getNearest(enemies);
+//var friend = this.getNearest(friends);
+if(nows<20)
+{
+    this.tacktick(nows, enemy);
+    this.defense(enemy);    
+}
+else if(nows<50)
+{
+    this.attacke(nows, enemies, enemy);
+}
+else
+{
+    if(nows<52) this.say("Attack!", {target: "Human Base"});
+    this.attack("Human Base");
+}

@@ -1,0 +1,50 @@
+var friends = this.getFriends();
+var enemies = this.getEnemies();
+if (enemies.length === 0) return;  // Chill if all enemies are dead
+var enemy = this.getNearest(enemies);
+var friend = this.getNearest(friends);
+if(this.now()<1)
+{
+    this.say("Follow! Follow ME!");
+}
+if(this.now()>45&&this.now()<50)
+{
+    this.say("Attack!", {target: "Human Base"});
+}
+if(this.now()>45)
+{
+    this.attack("Human Base");
+    return;
+}
+if(!this.getCooldown('jump')) 
+{
+    for(var k=0; k<enemies.length; k++)
+    {
+        if(this.distance(enemies[k])>15&&this.distance(enemies[k])<20&&enemies[k].type=="archer")
+        {
+            this.jumpTo(enemies[k].pos);
+            return;
+        }
+    }
+}
+if(!this.getCooldown('stomp') && this.distance(enemy) < 10) 
+{
+    var count = 0;
+    for(var i=0; i<enemies.length; i++)
+     if(this.distance(enemies[i])<10) count++;
+     if(enemies[i]=="Tharin") count+=5;
+     if(count>2)
+     {
+         this.stomp();
+         return;
+     }
+}
+if(!this.getCooldown('throw'))
+{
+    this.throw(enemy);
+    return;
+}
+// Which one do you do at any given time? Only the last called action happens.
+//
+//
+this.attack(enemy);

@@ -1,0 +1,142 @@
+this.defense = function() 
+{   
+    if(closestEnemyBI<distanceBase)
+    {
+        this.say("Attack "+closestEnemyB.id, {target: closestEnemyB});
+        this.attacksomeone(closestEnemyB, this.distance(closestEnemyB.pos)); 
+    }
+    else if(closestEnemyI<10)
+    {
+        this.say("Attack "+closestEnemy.id, {target: closestEnemy});
+        this.attacksomeone(closestEnemy, closestEnemyI);
+    }
+    else
+    {
+        this.say("Defend!", {targetPos: {x: 67, y: 30}});
+    }
+};
+this.attackenemy = function() 
+{ 
+    this.say("Attack "+closestEnemyB.id, {target: closestEnemyB});
+    if(closestEnemyI<10&&distanceBase<20)
+    {
+        this.attacksomeone(closestEnemy, closestEnemyI);
+    }
+    else 
+    {
+        this.attacksomeone(closestEnemyB, this.distance(closestEnemyB.pos));
+    }
+};
+this.attackfront = function() 
+{ 
+    this.say("Attack "+closestEnemy.id, {target: closestEnemy});
+    this.attacksomeone(closestEnemy, closestEnemyI);
+};
+this.attackbase = function() 
+{ 
+    this.say("Attack BASE!", {target: "Human Base"});
+    if(!this.getCooldown('jump')&&this.distance(eBase)>15)  
+        this.jumpTo(eBase);
+    else
+        this.attack("Human Base");
+};
+this.attackknight = function() 
+{ 
+    this.say("Attack " + Knight.id, {target: Knight});
+    this.attacksomeone(Knight, closestKnightI);
+};
+this.attacksomeone = function(e, db) 
+{     
+    if(!this.getCooldown('stomp') && count>2)
+    {
+        this.stomp();
+    }
+    else if(!this.getCooldown('jump')&&(db>7))
+    {
+        this.jumpTo(e.pos);
+    }
+    else if(!this.getCooldown('throw')&&(fBase.distance(e.pos)<distanceBase||nows>25||distanceBase>40))    
+    {
+        this.throw(e);
+    }
+    else
+    {
+        this.attack(e);
+    }
+};
+this.taktik = function() 
+{   
+    if(nows>45||health<50) {
+        this.attackbase();
+    }
+    else if(closestKnightI<20||closestKnightBI<30||closestKnightBI<distanceBase) {
+        this.attackknight();
+    }
+    else if(nows>40||health<100) {
+        this.attackfront();
+    }
+    else if(nows>25||health<300||closestArrowBI<35||closestArrowI<25||closestKnightI==999) {
+        this.attackenemy();        
+    }
+    else
+    {
+        this.defense();
+    }
+};
+var nows = this.now();
+var enemies = this.getEnemies();
+var closestArrow, Knight, closestEnemy;
+var closestArrowB, closestEnemyB;
+var closestArrowI=999, closestKnightI=999, closestEnemyI=999;
+var closestArrowBI=999, closestKnightBI=999, closestEnemyBI=999;
+var fBase = new Vector(73, 30);
+var eBase = new Vector(6, 30);
+var distanceBase = this.distance(fBase);
+var count = 0;
+var health = this.health;
+if(enemies.length ===0)
+{
+    this.attackbase();
+    return 0;
+}
+for(var i=0;i<enemies.length;i++)
+{
+    baseDistance = fBase.distance(enemies[i].pos);
+    thisDistance = this.distance(enemies[i]);
+    if(thisDistance<closestArrowI&&enemies[i].type=='archer')
+    {
+        closestArrowI = thisDistance;
+        closestArrow  = enemies[i];
+    }
+    if(enemies[i].type=='knight')
+    {
+        closestKnightI = thisDistance;
+        closestKnightBI = baseDistance;
+        Knight  = enemies[i];
+    }
+    if(thisDistance<closestEnemyI)
+    {
+        closestEnemyI = thisDistance;
+        closestEnemy  = enemies[i];
+        if(thisDistance>10) count++;
+    }    
+    if(baseDistance<closestArrowBI&&enemies[i].type=='archer')
+    {
+        closestArrowBI = baseDistance;
+        closestArrowB  = enemies[i];
+    }
+    if(baseDistance<closestEnemyBI)
+    {
+        closestEnemyBI = baseDistance;
+        closestEnemyB  = enemies[i];
+    }
+    if(thisDistance<10)
+    {
+       count+=1;
+       if(enemies[i].type=='knight')
+       {
+           count+=2;
+       }
+    }
+}
+this.taktik();

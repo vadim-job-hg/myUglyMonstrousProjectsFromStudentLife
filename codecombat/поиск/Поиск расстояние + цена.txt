@@ -1,0 +1,14 @@
+var items = this.getItems();
+var coor;
+var cost = 1;
+var dist = 9999;
+for(var i=0; i<items.length; i++)
+{
+   if(this.distance(items[i])*cost<dist*items[i].bountyGold)
+   {
+       cost = items[i].bountyGold;
+       coor = items[i].pos;
+       dist = this.distance(items[i]);
+   }
+}
+this.move(coor);

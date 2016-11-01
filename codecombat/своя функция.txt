@@ -1,0 +1,2 @@
+this.detonate = function(i) { this.say("Detonate " + i, [i]); };
+var coins = this.getItems();
